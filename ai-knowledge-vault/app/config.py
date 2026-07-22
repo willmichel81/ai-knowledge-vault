@@ -1,3 +1,0 @@
-APP_NAME = "AI Knowledge Vault"
-VERSION = "0.1.0"
-ENVIRONMENT = "development"
