@@ -1,8 +1,10 @@
-from fastapi import APIRouter
-from app.config import APP_NAME, VERSION, ENVIRONMENT
-from app.logger import logger
 import socket
 import sys
+
+from fastapi import APIRouter
+
+from app.config import APP_NAME, ENVIRONMENT, VERSION
+from app.logger import logger
 
 router = APIRouter()
 

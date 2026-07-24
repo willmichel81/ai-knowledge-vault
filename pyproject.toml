@@ -1,0 +1,16 @@
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+#| Rule | Purpose         |
+#| ---- | --------------- |
+#| E    | Style errors    |
+#| F    | Python mistakes |
+#| I    | Import sorting  |
+
+select = [
+    "E",
+    "F",
+    "I"
+]
