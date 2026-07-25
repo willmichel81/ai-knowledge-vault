@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from app.api.routes import router
 from app.api.documents import router as documents_router
+from app.api.routes import router
 
 app = FastAPI(title="AI Knowledge Vault", version="0.1.0")
 
