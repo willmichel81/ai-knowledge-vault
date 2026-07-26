@@ -2,7 +2,7 @@ from uuid import UUID
 
 from fastapi import APIRouter, HTTPException
 
-from app.models.document import Document, DocumentCreate
+from app.schemas.document import Document, DocumentCreate
 from app.services import document_service
 
 router = APIRouter(

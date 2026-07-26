@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from app.models.document import Document, DocumentCreate
+from app.schemas.document import Document, DocumentCreate
 
 _documents: dict[UUID, Document] = {}
 
