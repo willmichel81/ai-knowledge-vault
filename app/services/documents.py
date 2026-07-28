@@ -1,17 +1,16 @@
 from uuid import UUID
 
+from app.repositories import documents as repository
 from app.schemas.document import Document, DocumentCreate
 
-_documents: dict[UUID, Document] = {}
 
 def create(document: DocumentCreate) -> Document:
-    new_document = Document(**document.model_dump())
-    _documents[new_document.id] = new_document
-    return new_document
+    return repository.create(document)
+
 
 def list_documents() -> list[Document]:
-    return list(_documents.values())
+    return repository.list_documents()
 
 
 def get(document_id: UUID) -> Document | None:
-    return _documents.get(document_id)
+    return repository.get(document_id)
