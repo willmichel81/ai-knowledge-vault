@@ -21,7 +21,7 @@ SessionLocal = sessionmaker(
 
 
 def init_db():
-    # Import models here to avoid circular imports
-    from app.database import models
+ # Import models here to register tables with SQLAlchemy metadata
+    from app.database import models  # noqa: F401
 
     Base.metadata.create_all(bind=engine)

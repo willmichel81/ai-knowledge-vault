@@ -1,8 +1,10 @@
 from uuid import UUID, uuid4
+
 from sqlalchemy.orm import Session
 
 from app.database.models import DocumentModel
 from app.schemas.document import Document, DocumentCreate
+
 
 def create(db: Session, document: DocumentCreate) -> Document:
     db_document = DocumentModel(
