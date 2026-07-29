@@ -8,5 +8,7 @@ class DocumentCreate(BaseModel):
     content: str
 
 
-class Document(DocumentCreate):
-    id: UUID = Field(default_factory=uuid4)
+class Document(BaseModel):
+    id: UUID
+    title: str
+    content: str
